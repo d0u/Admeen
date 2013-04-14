@@ -13,4 +13,4 @@ Admeen
 
 演示
 -----------------------
-(鲜活的DEMO看这里)[http://d0u.github.io/Admeen/demo]
+[鲜活的DEMO看这里](http://d0u.github.io/Admeen/demo)
