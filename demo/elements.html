@@ -1,0 +1,1770 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Admeen Framework</title>
+    <meta content="lu" name="author" />
+        
+<meta name="description" content="我是一个管理面板或用户中心的前端框架" />
+    
+    
+
+    <!-- Mobile Specific Metas -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Le styles -->
+
+    <!-- Use new way for google web fonts 
+    http://www.smashingmagazine.com/2012/07/11/avoiding-faux-weights-styles-google-web-fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css' /> <!-- Headings -->
+    <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css' /> <!-- Text -->
+    <!--[if lt IE 9]>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans:700" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <!-- Core stylesheets do not remove -->
+    <link href="css/bootstrap/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/supr-theme/jquery.ui.supr.css" rel="stylesheet" type="text/css"/>
+    <link href="css/icons.css" rel="stylesheet" type="text/css" />
+
+    <!-- Plugin stylesheets -->
+    <link href="plugins/misc/qtip/jquery.qtip.css" rel="stylesheet" type="text/css" />    
+    <link href="plugins/misc/prettify/prettify.css" type="text/css" rel="stylesheet" />
+    <link href="plugins/misc/pnotify/jquery.pnotify.default.css" type="text/css" rel="stylesheet" />
+       
+    <link href="plugins/forms/uniform/uniform.default.css" type="text/css" rel="stylesheet" />
+        
+    <!-- Main stylesheets -->
+    <link href="css/main.css" rel="stylesheet" type="text/css" /> 
+
+    <!-- Custom stylesheets ( Put your own changes here ) -->
+    <link href="css/custom.css" rel="stylesheet" type="text/css" /> 
+    
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/apple-touch-icon-144-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/apple-touch-icon-114-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/apple-touch-icon-72-precomposed.png" />
+    <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57-precomposed.png" />
+    
+    <script type="text/javascript">
+        //adding load class to body and hide page
+        document.documentElement.className += 'loadstate';
+    </script>
+
+    </head>
+      
+    <body>
+
+    <!-- loading animation -->
+    <div id="qLoverlay"></div>
+    <div id="qLbar"></div>
+    
+    <div id="header">
+
+        <div class="navbar">
+            <div class="navbar-inner">
+              <div class="container-fluid">
+                <a class="brand" href="dashboard.html">Admeen.<span class="slogan">framework</span></a>
+                <div class="nav-no-collapse">
+                    <ul class="nav">
+                        <li class="active"><a href="dashboard.html"><span class="icon16 icomoon-icon-screen-2"></span> 主面板</a></li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="icon16 icomoon-icon-cog"></span> 设置
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="menu">
+                                    <ul>
+                                        <li>                                                    
+                                            <a href="#"><span class="icon16 icomoon-icon-equalizer"></span>站点配置</a>
+                                        </li>
+                                        <li>                                                    
+                                            <a href="#"><span class="icon16 icomoon-icon-wrench"></span>插件</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="icon16 icomoon-icon-picture-2"></span>主题</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="icon16 icomoon-icon-mail-3"></span>消息 <span class="notification">8</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="menu">
+                                    <ul class="messages">    
+                                        <li class="header"><strong>共有消息</strong>(10)邮件, (2)私信</li>
+                                        <li>
+                                           <span class="icon"><span class="icon16 icomoon-icon-user-3"></span></span>
+                                            <span class="name"><a data-toggle="modal" href="#myModal1"><strong>赵本山</strong></a><span class="time">35 分钟前</span></span>
+                                            <span class="msg">我有一个问题想问 ...</span>
+                                        </li>
+                                        <li>
+                                           <span class="icon avatar"><img src="images/avatar.jpg" alt="" /></span>
+                                            <span class="name"><a data-toggle="modal" href="#myModal1"><strong>林志玲</strong></a><span class="time">2 小时前</span></span>
+                                            <span class="msg">你知不知道我暗恋了你多少年，我 ...</span>
+                                        </li>
+                                        <li>
+                                            <span class="icon"><span class="icon16 icomoon-icon-mail-3"></span></span>
+                                            <span class="name"><a data-toggle="modal" href="#myModal1"><strong>马化腾</strong></a><span class="time">1 天前</span></span>
+                                            <span class="msg">鲁总，我很看好你，请问您有收购腾讯的意向么 ...</span>
+                                        </li>
+                                        <li class="view-all"><a href="#">查看全部消息 <span class="icon16 icomoon-icon-arrow-right-8"></span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                  
+                    <ul class="nav pull-right usernav">
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                <span class="icon16 icomoon-icon-bell-2"></span><span class="notification">3</span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="menu">
+                                    <ul class="notif">
+                                        <li class="header"><strong>提醒</strong> (3)</li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="icon"><span class="icon16 icomoon-icon-user-3"></span></span>
+                                                <span class="event">1个新用户注册</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="icon"><span class="icon16 icomoon-icon-comments-4"></span></span>
+                                                <span class="event">会员小王添加了评论</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="icon"><span class="icon16 icomoon-icon-new-2"></span></span>
+                                                <span class="event">管理员 lee 发帖违规</span>
+                                            </a>
+                                        </li>
+                                        <li class="view-all"><a href="#">查看全部提醒 <span class="icon16 icomoon-icon-arrow-right-8"></span></a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle avatar" data-toggle="dropdown">
+                                <img src="images/avatar.jpg" alt="" class="image" /> 
+                                <span class="txt">admeen@admin</span>
+                                <b class="caret"></b>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="menu">
+                                    <ul>
+                                        <li>
+                                            <a href="#"><span class="icon16 icomoon-icon-user-3"></span>个人资料</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="icon16 icomoon-icon-comments-2"></span>审核评论</a>
+                                        </li>
+                                        <li>
+                                            <a href="#"><span class="icon16 icomoon-icon-plus-2"></span>添加用户</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a href="index.html"><span class="icon16 icomoon-icon-exit"></span> 退出</a></li>
+                    </ul>
+                </div><!-- /.nav-collapse -->
+              </div>
+            </div><!-- /navbar-inner -->
+          </div><!-- /navbar --> 
+
+    </div><!-- End #header -->
+
+    <div id="wrapper">
+
+        <!--Responsive navigation button-->  
+        <div class="resBtn">
+            <a href="#"><span class="icon16 minia-icon-list-3"></span></a>
+        </div>
+        <!--Sidebar collapse button-->  
+        <div class="collapseBtn leftbar">
+             <a href="#" class="tipR" title="隐藏侧边栏"><span class="icon12 minia-icon-layout"></span></a>
+        </div>
+        
+        <!--Sidebar background-->
+        <div id="sidebarbg"></div>
+        <!--Sidebar content-->
+        <div id="sidebar">
+
+            <div class="shortcuts">
+                <ul>
+                    <li><a href="support.html" title="客户支持" class="tip"><span class="icon24 icomoon-icon-support"></span></a></li>
+                    <li><a href="#" title="数据库备份" class="tip"><span class="icon24 icomoon-icon-database"></span></a></li>
+                    <li><a href="charts.html" title="销售统计" class="tip"><span class="icon24 icomoon-icon-pie-2"></span></a></li>
+                    <li><a href="#" title="发表文章" class="tip"><span class="icon24 icomoon-icon-pencil"></span></a></li>
+                </ul>
+            </div><!-- End search -->            
+
+                        <div class="sidenav">
+
+                <div class="sidebar-widget" style="margin: -1px 0 0 0;">
+                    <h5 class="title" style="margin-bottom:0">功能导航</h5>
+                </div><!-- End .sidenav-widget -->
+
+                <div class="mainnav">
+                    <ul>
+                        <li><a href="charts.html"><span class="icon16 icomoon-icon-stats-up"></span>图 表</a></li>
+                        <li>
+                            <a href="#"><span class="icon16 icomoon-icon-list-view-2"></span>表 单</a>
+                            <ul class="sub">
+                                <li><a href="forms.html"><span class="icon16 icomoon-icon-file"></span>表单项</a></li>
+                                <li><a href="forms-validation.html"><span class="icon16 icomoon-icon-file"></span>表单验证</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><span class="icon16 icomoon-icon-grid"></span>表 格</a>
+                            <ul class="sub">
+                                <li><a href="tables.html"><span class="icon16 icomoon-icon-arrow-right-2"></span>静态表</a></li>
+                                <li><a href="data-table.html"><span class="icon16 icomoon-icon-arrow-right-2"></span>数据表</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><span class="icon16 icomoon-icon-equalizer-2"></span>UI元素</a>
+                            <ul class="sub">
+                                <li><a href="icons.html"><span class="icon16 icomoon-icon-rocket"></span>图 标</a></li>
+                                <li><a href="buttons.html"><span class="icon16 icomoon-icon-file"></span>按 钮</a></li>
+                                <li><a href="elements.html"><span class="icon16 icomoon-icon-cogs"></span>其 它</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="typo.html"><span class="icon16 icomoon-icon-font"></span>排 版</a></li>
+                        <li><a href="grid.html"><span class="icon16 icomoon-icon-grid-view"></span>网 格</a></li>
+                        <li><a href="calendar.html"><span class="icon16 icomoon-icon-calendar"></span>日程表</a></li>
+                        
+                        <li><a href="file.html"><span class="icon16 icomoon-icon-upload"></span>文件管理</a></li>
+                        <li>
+                            <a href="#"><span class="icon16 icomoon-icon-file"></span>错误页面<span class="notification">6</span></a>
+                            <ul class="sub">
+                                <li><a href="403.html"><span class="icon16 icomoon-icon-file"></span>403</a></li>
+                                <li><a href="404.html"><span class="icon16 icomoon-icon-file"></span>404</a></li>
+                                <li><a href="405.html"><span class="icon16 icomoon-icon-file"></span>405</a></li>
+                                <li><a href="500.html"><span class="icon16 icomoon-icon-file"></span>500</a></li>
+                                <li><a href="503.html"><span class="icon16 icomoon-icon-file"></span>Error 503</a></li>
+                                <li><a href="offline.html"><span class="icon16 icomoon-icon-file"></span>建设中提醒</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="#"><span class="icon16 icomoon-icon-box"></span>其它页面<span class="notification blue">10</span></a>
+                            <ul class="sub">
+                                <li><a href="invoice.html"><span class="icon16 icomoon-icon-file"></span>订单页面</a></li>
+                                <li><a href="profile.html"><span class="icon16 icomoon-icon-file"></span>用户资料</a></li>
+                                <li><a href="search.html"><span class="icon16 icomoon-icon-search-3"></span>搜索页面</a></li>
+                                
+                                <li><a href="support.html"><span class="icon16  icomoon-icon-support"></span>客服页面</a></li>
+                                
+                                <li><a href="structure.html"><span class="icon16 icomoon-icon-file"></span>脑补页面</a></li>
+                                
+                                <li><a href="right-sidebar.html"><span class="icon16 icomoon-icon-file"></span>右侧边栏</a></li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div><!-- End sidenav -->
+
+            <div class="sidebar-widget">
+                <h5 class="title">月流量使用</h5>
+                <div class="content">
+                    <span class="icon16 icomoon-icon-loop left"></span>
+                    <div class="progress progress-mini progress-danger left tip" title="87%">
+                      <div class="bar" style="width: 87%;"></div>
+                    </div>
+                    <span class="percent">87%</span>
+                    <div class="stat">19419.94 / 12000 MB</div>
+                </div>
+
+            </div><!-- End .sidenav-widget -->
+
+            <div class="sidebar-widget">
+                <h5 class="title">磁盘使用量</h5>
+                <div class="content">
+                    <span class="icon16 icomoon-icon-drive left"></span>
+                    <div class="progress progress-mini progress-success left tip" title="16%">
+                      <div class="bar" style="width: 16%;"></div>
+                    </div>
+                    <span class="percent">16%</span>
+                    <div class="stat">304.44 / 8000 MB</div>
+                </div>
+
+            </div><!-- End .sidenav-widget -->
+
+            <div class="sidebar-widget">
+                <h5 class="title">广告统计</h5>
+                <div class="content">
+                    
+                    <div class="stats">
+                        <div class="item">
+                            <div class="head clearfix">
+                                <div class="txt">展示量</div>
+                            </div>
+                            <span class="icon16 icomoon-icon-eye left"></span>
+                            <div class="number">21,501</div>
+                            <div class="change">
+                                <span class="icon24 icomoon-icon-arrow-up-2 green"></span>
+                                5%
+                            </div>
+                            <span id="stat1" class="spark"></span>
+                        </div>
+                        <div class="item">
+                            <div class="head clearfix">
+                                <div class="txt">点击量</div>
+                            </div>
+                            <span class="icon16 icomoon-icon-thumbs-up left"></span>
+                            <div class="number">308</div>
+                            <div class="change">
+                                <span class="icon24 icomoon-icon-arrow-down-2 red"></span>
+                                8%
+                            </div>
+                            <span id="stat2" class="spark"></span>
+                        </div>
+                        <div class="item">
+                            <div class="head clearfix">
+                                <div class="txt">转化率</div>
+                            </div>
+                            <span class="icon16 icomoon-icon-heart left"></span>
+                            <div class="number">4%</div>
+                            <div class="change">
+                                <span class="icon24 icomoon-icon-arrow-down-2 red"></span>
+                                1%
+                            </div>
+                            <span id="stat3" class="spark"></span>
+                        </div>
+                        <div class="item">
+                            <div class="head clearfix">
+                                <div class="txt">佣金</div>
+                            </div>
+                            <span class="icon16 icomoon-icon-coin left"></span>
+                            <div class="number">￥376</div>
+                            <div class="change">
+                                <span class="icon24 icomoon-icon-arrow-up-2 green"></span>
+                                26%
+                            </div>
+                            <span id="stat4" class="spark"></span>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div><!-- End .sidenav-widget -->
+
+            <div class="sidebar-widget">
+                <h5 class="title">内容统计</h5>
+                <div class="content">
+                    <div class="rightnow">
+                        <ul class="unstyled">
+                            <li><span class="number">34</span><span class="icon16 icomoon-icon-new-2"></span>帖子</li>
+                            <li><span class="number">7</span><span class="icon16 icomoon-icon-file"></span>页面</li>
+                            <li><span class="number">14</span><span class="icon16 icomoon-icon-list-view"></span>目录</li>
+                            <li><span class="number">201</span><span class="icon16 icomoon-icon-tag"></span>标签</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div><!-- End .sidenav-widget -->
+
+        </div><!-- End #sidebar -->
+
+        <!--Body content-->
+        <div id="content" class="clearfix">
+            <div class="contentwrapper"><!--Content wrapper-->
+
+                <div class="heading">
+
+                    <h3>其它UI元素</h3>                    
+
+                    <div class="resBtnSearch">
+                        <a href="#"><span class="icon16 icomoon-icon-search-3"></span></a>
+                    </div>
+
+                    <div class="search">
+
+                        <form id="searchform" action="search.html">
+                            <input type="text" id="tipue_search_input" class="top-search" placeholder="搜索" />
+                            <input type="submit" id="tipue_search_button" class="search-btn" value=""/>
+                        </form>
+                
+                    </div><!-- End search -->
+                    
+                    <ul class="breadcrumb">
+                        <li>你的位置:</li>
+                        <li>
+                            <a href="#" class="tip" title="返回主面板">
+                                <span class="icon16 icomoon-icon-screen-2"></span>
+                            </a> 
+                            <span class="divider">
+                                <span class="icon16 icomoon-icon-arrow-right-2"></span>
+                            </span>
+                        </li>
+                        <li class="active">其它UI元素</li>
+                    </ul>
+
+                </div><!-- End .heading-->
+                    
+                <!-- Build page from here: Usual with <div class="row-fluid"></div> -->
+
+                    <div class="row-fluid">
+
+                        <div class="span6">
+                            <div class="page-header">
+                                <h4>常规选项卡</h4>
+                            </div>
+                            <div style="margin-bottom: 20px;">
+                                <ul id="myTab" class="nav nav-tabs pattern">
+                                    <li class="active"><a href="#home" data-toggle="tab">首页</a></li>
+                                    <li><a href="#profile" data-toggle="tab">资料</a></li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">下拉菜单 <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#dropdown1" data-toggle="tab">@fat</a></li>
+                                            <li><a href="#dropdown2" data-toggle="tab">@mdo</a></li>
+                                         </ul>
+                                    </li>
+                                </ul>
+
+                                <div class="tab-content">
+                                    <div class="tab-pane fade in active" id="home">
+                                        <p>苍茫的天涯是我的爱 绵绵的青山脚下花正开 什么样的节奏是最呀最摇摆 什么样的歌声才是最开怀  </p>
+                                    </div>
+                                    <div class="tab-pane fade" id="profile">
+                                        <p>苍茫的天涯是我的爱 绵绵的青山脚下花正开 什么样的节奏是最呀最摇摆 什么样的歌声才是最开怀  </p>
+                                    </div>
+                                    <div class="tab-pane fade" id="dropdown1">
+                                        <p>苍茫的天涯是我的爱 绵绵的青山脚下花正开 什么样的节奏是最呀最摇摆 什么样的歌声才是最开怀  </p>
+                                    </div>
+                                    <div class="tab-pane fade" id="dropdown2">
+                                        <p>苍茫的天涯是我的爱 绵绵的青山脚下花正开 什么样的节奏是最呀最摇摆 什么样的歌声才是最开怀  </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div><!-- End .span6 -->  
+
+                        <div class="span6">
+                            <div class="page-header">
+                                <h4>底部选项卡 </h4>
+                            </div>
+
+                            <div style="margin-bottom: 20px;">
+                                <div class="tabbable tabs-below">
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab1">
+                                            <p>弯弯的河水从天上来 流向那万紫千红一片海 火辣辣的歌谣是我们的期待 一路边走边唱才是最自在</p>
+                                        </div>
+                                        <div class="tab-pane" id="tab2">
+                                            <p>弯弯的河水从天上来 流向那万紫千红一片海 火辣辣的歌谣是我们的期待 一路边走边唱才是最自在</p>
+                                        </div>
+                                        <div class="tab-pane" id="tab3">
+                                           <p>弯弯的河水从天上来 流向那万紫千红一片海 火辣辣的歌谣是我们的期待 一路边走边唱才是最自在</p>
+                                        </div>
+                                    </div>
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#tab1" data-toggle="tab">Tab 1</a></li>
+                                        <li><a href="#tab2" data-toggle="tab">Tab 2</a></li>
+                                        <li><a href="#tab3" data-toggle="tab">Tab 3</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div><!-- End .span6 -->  
+
+                    </div><!-- End .row-fluid -->
+
+                    <div class="row-fluid">
+                        <div class="span6">
+                            <div class="page-header">
+                                <h4>梯度渐变选项卡</h4>
+                            </div>
+
+                            <div style="margin-bottom: 20px;">
+                                <ul id="myTab1" class="nav nav-tabs">
+                                    <li class="active"><a href="#home1" data-toggle="tab">首页</a></li>
+                                    <li><a href="#profile1" data-toggle="tab">资料</a></li>
+                                    <li class="dropdown">
+                                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">下拉菜单 <b class="caret"></b></a>
+                                        <ul class="dropdown-menu">
+                                            <li><a href="#dropdown3" data-toggle="tab">@fat</a></li>
+                                            <li><a href="#dropdown4" data-toggle="tab">@mdo</a></li>
+                                         </ul>
+                                    </li>
+                                </ul>
+
+                                <div class="tab-content">
+                                    <div class="tab-pane fade in active" id="home1">
+                                        <p>你是我天边 最美的云彩 让我用心把你留下来（留下来） 悠悠的唱着最炫的民族风 让爱卷走所有的尘埃 </p>
+                                    </div>
+                                    <div class="tab-pane fade" id="profile1">
+                                        <p>你是我天边 最美的云彩 让我用心把你留下来（留下来） 悠悠的唱着最炫的民族风 让爱卷走所有的尘埃 </p>
+                                    </div>
+                                    <div class="tab-pane fade" id="dropdown3">
+                                        <p>你是我天边 最美的云彩 让我用心把你留下来（留下来） 悠悠的唱着最炫的民族风 让爱卷走所有的尘埃</p>
+                                    </div>
+                                    <div class="tab-pane fade" id="dropdown4">
+                                        <p>你是我天边 最美的云彩 让我用心把你留下来（留下来） 悠悠的唱着最炫的民族风 让爱卷走所有的尘埃</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div><!-- End .span6 -->  
+
+                        <div class="span6">                            
+
+                             <div class="page-header">
+                                <h4>左侧选项卡</h4>
+                            </div>
+
+                            <div style="margin-bottom: 20px;">
+                                <div class="tabbable tabs-left">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#tab4" data-toggle="tab">Tab 1</a></li>
+                                        <li class=""><a href="#tab5" data-toggle="tab">Tab 2</a></li>
+                                        <li class=""><a href="#tab6" data-toggle="tab">Tab 3</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab4">
+                                            <p>你是我天边 最美的云彩 让我用心把你留下来（留下来） 悠悠的唱着最炫的民族风 让爱卷走所有的尘埃 </p>
+                                        </div>
+                                        <div class="tab-pane" id="tab5">
+                                            <p>你是我天边 最美的云彩 让我用心把你留下来（留下来） 悠悠的唱着最炫的民族风 让爱卷走所有的尘埃 </p>
+                                        </div>
+                                        <div class="tab-pane" id="tab6">
+                                            <p>你是我天边 最美的云彩 让我用心把你留下来（留下来） 悠悠的唱着最炫的民族风 让爱卷走所有的尘埃 </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End .span6 -->  
+                    </div><!-- End .row-fluid -->
+
+                    <div class="row-fluid">
+
+                        <div class="span6">
+
+                            <div class="page-header">
+                                <h4>有通知的按钮</h4>
+                            </div>
+
+                            <div class="centerContent">
+                                <ul class="bigBtnIcon">
+                                    <li>
+                                        <a href="#" title="I`m with gradient" class="tipB">
+                                            <span class="icon icomoon-icon-users"></span>
+                                            <span class="txt">用户</span>
+                                            <span class="notification">5</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon icomoon-icon-support"></span>
+                                            <span class="txt">客户支持</span>
+                                            <span class="notification blue">12</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#" title="I`m with pattern" class="pattern tipB">
+                                            <span class="icon icomoon-icon-comments-2"></span>
+                                            <span class="txt">新评论</span>
+                                            <span class="notification green">23</span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="icon icomoon-icon-basket"></span>
+                                            <span class="txt">订单</span>
+                                            <span class="notification">+5</span>
+                                        </a>
+                                    </li> 
+                                </ul>
+                            </div><!-- End .span6 -->  
+
+                        </div><!-- End .span6 -->  
+
+                        <div class="span6">
+                            <div class="page-header">
+                                <h4>右侧选项卡</h4>
+                            </div>
+
+                            <div style="margin-bottom: 20px;">
+                                <div class="tabbable tabs-right">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active"><a href="#tab7" data-toggle="tab">Tab 1</a></li>
+                                        <li><a href="#tab8" data-toggle="tab">Tab 2</a></li>
+                                        <li><a href="#tab9" data-toggle="tab">Tab 3</a></li>
+                                    </ul>
+                                    <div class="tab-content">
+                                        <div class="tab-pane active" id="tab7">
+                                             <p>你是我天边 最美的云彩 让我用心把你留下来（留下来） 悠悠的唱着最炫的民族风 让爱卷走所有的尘埃 </p>
+                                        </div>
+                                        <div class="tab-pane" id="tab8">
+                                           <p>你是我天边 最美的云彩 让我用心把你留下来（留下来） 悠悠的唱着最炫的民族风 让爱卷走所有的尘埃 </p>
+                                        </div>
+                                        <div class="tab-pane" id="tab9">
+                                            <p>你是我天边 最美的云彩 让我用心把你留下来（留下来） 悠悠的唱着最炫的民族风 让爱卷走所有的尘埃</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div><!-- End .span6 -->  
+
+                    </div><!-- End .row-fluid -->
+
+                    <div class="row-fluid">
+
+                        <div class="span6">
+                            <div class="page-header">
+                                <h4>折叠文本A</h4>
+                            </div>
+                            <div class="accordion" id="accordion2">
+                            <div class="accordion-group">
+                              <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                                  折叠 #1
+                                </a>
+                              </div>
+                              <div id="collapseOne" class="accordion-body collapse" style="height: 0px; ">
+                                <div class="accordion-inner">
+                                 老夫聊发少年狂，左牵黄，右擎苍。锦帽貂裘，千骑卷平冈。为报倾城随太守，亲射虎，看孙郎。
+酒酣胸胆尚开张，鬓微霜，又何妨！持节云中，何日遣冯唐？会挽雕弓如满月，西北旺，射天狼。
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-group">
+                              <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseTwo">
+                                  折叠 #2
+                                </a>
+                              </div>
+                              <div id="collapseTwo" class="accordion-body collapse" style="height: 0px; ">
+                                <div class="accordion-inner">
+                                  老夫聊发少年狂，左牵黄，右擎苍。锦帽貂裘，千骑卷平冈。为报倾城随太守，亲射虎，看孙郎。
+酒酣胸胆尚开张，鬓微霜，又何妨！持节云中，何日遣冯唐？会挽雕弓如满月，西北旺，射天狼。
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-group">
+                              <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseThree">
+                                  折叠 #3
+                                </a>
+                              </div>
+                              <div id="collapseThree" class="accordion-body collapse" style="height: 0px; ">
+                                <div class="accordion-inner">
+                                 老夫聊发少年狂，左牵黄，右擎苍。锦帽貂裘，千骑卷平冈。为报倾城随太守，亲射虎，看孙郎。
+酒酣胸胆尚开张，鬓微霜，又何妨！持节云中，何日遣冯唐？会挽雕弓如满月，西北旺，射天狼。
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+
+                        <div class="page-header">
+                           <h4>折叠B</h4>
+                        </div>
+                        <div class="accordion" id="accordion1">
+                            <div class="accordion-group">
+                              <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" href="#collapseOne1">
+                                  折叠 #1
+                                </a>
+                              </div>
+                              <div id="collapseOne1" class="accordion-body collapse" style="height: 0px; ">
+                                <div class="accordion-inner">
+                                 老夫聊发少年狂，左牵黄，右擎苍。锦帽貂裘，千骑卷平冈。为报倾城随太守，亲射虎，看孙郎。
+酒酣胸胆尚开张，鬓微霜，又何妨！持节云中，何日遣冯唐？会挽雕弓如满月，西北旺，射天狼。
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-group">
+                              <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" href="#collapseTwo2">
+                                  折叠 #2
+                                </a>
+                              </div>
+                              <div id="collapseTwo2" class="accordion-body collapse" style="height: 0px; ">
+                                <div class="accordion-inner">
+                                 老夫聊发少年狂，左牵黄，右擎苍。锦帽貂裘，千骑卷平冈。为报倾城随太守，亲射虎，看孙郎。
+酒酣胸胆尚开张，鬓微霜，又何妨！持节云中，何日遣冯唐？会挽雕弓如满月，西北旺，射天狼。
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-group">
+                              <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" href="#collapseThree3">
+                                  折叠 #3
+                                </a>
+                              </div>
+                              <div id="collapseThree3" class="accordion-body collapse" style="height: 0px; ">
+                                <div class="accordion-inner">
+                                 老夫聊发少年狂，左牵黄，右擎苍。锦帽貂裘，千骑卷平冈。为报倾城随太守，亲射虎，看孙郎。
+酒酣胸胆尚开张，鬓微霜，又何妨！持节云中，何日遣冯唐？会挽雕弓如满月，西北旺，射天狼。
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div><!-- End .span6 -->
+
+                        <div class="span6">
+                            <div class="page-header">
+                                <h4>折叠C </h4>
+                            </div>
+                            <div class="accordion pattern" id="accordion3">
+                            <div class="accordion-group">
+                              <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#One">
+                                  折叠 Item #1
+                                </a>
+                              </div>
+                              <div id="One" class="accordion-body collapse" style="height: 0px; ">
+                                <div class="accordion-inner">
+                                  老夫聊发少年狂，左牵黄，右擎苍。锦帽貂裘，千骑卷平冈。为报倾城随太守，亲射虎，看孙郎。
+酒酣胸胆尚开张，鬓微霜，又何妨！持节云中，何日遣冯唐？会挽雕弓如满月，西北旺，射天狼。.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-group">
+                              <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#Two">
+                                  折叠 Item #2
+                                </a>
+                              </div>
+                              <div id="Two" class="accordion-body collapse" style="height: 0px; ">
+                                <div class="accordion-inner">
+                                  老夫聊发少年狂，左牵黄，右擎苍。锦帽貂裘，千骑卷平冈。为报倾城随太守，亲射虎，看孙郎。
+酒酣胸胆尚开张，鬓微霜，又何妨！持节云中，何日遣冯唐？会挽雕弓如满月，西北旺，射天狼。
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-group">
+                              <div class="accordion-heading">
+                                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion3" href="#Three">
+                                  折叠 Item #3
+                                </a>
+                              </div>
+                              <div id="Three" class="accordion-body in collapse" style="height: auto; ">
+                                <div class="accordion-inner">
+                                  老夫聊发少年狂，左牵黄，右擎苍。锦帽貂裘，千骑卷平冈。为报倾城随太守，亲射虎，看孙郎。
+酒酣胸胆尚开张，鬓微霜，又何妨！持节云中，何日遣冯唐？会挽雕弓如满月，西北旺，射天狼。
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div><!-- End .span6 -->
+
+                    </div><!-- End .row-fluid -->
+
+                    <div class="row-fluid">
+
+                        <div class="span6">
+
+                            <div class="box">
+
+                                <div class="title">
+
+                                    <h4>
+                                        <span class="icon16 icomoon-icon-equalizer"></span>
+                                        <span>滑动条</span>
+                                    </h4>
+
+                                </div>
+                                <div class="content">
+
+                                    <form class="form-horizontal" action="#">
+
+                                        <div class="form-row row-fluid">
+                                            <div class="span12">
+                                                <div class="row-fluid">
+                                                    <label class="form-label span4" for="slider">普通</label>
+                                                    <div class="span8">
+                                                        <div id="slider" class="slider"></div>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+
+                                        <div class="form-row row-fluid">
+                                            <div class="span12">
+                                                <div class="row-fluid">
+                                                    <label class="form-label span4" for="slider">每次增量50</label>
+                                                    <div class="span8">
+                                                        <div id="slider1" class="slider"></div>
+                                                        <input type="text" id="amount" style="border:0; color:#ED7A53; font-weight:bold; box-shadow:none;" />
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+
+                                        <div class="form-row row-fluid">
+                                            <div class="span12">
+                                                <div class="row-fluid">
+                                                    <label class="form-label span4" for="slider">范围滑动</label>
+                                                    <div class="span8">
+                                                        <div id="slider-range" class="slider"></div>
+                                                        <input type="text" id="amount1" style="border:0; color:#ED7A53; font-weight:bold; box-shadow:none;" />
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+
+                                        <div class="form-row row-fluid">
+                                            <div class="span12">
+                                                <div class="row-fluid">
+                                                    <label class="form-label span4" for="slider">最小值</label>
+                                                    <div class="span8">
+                                                        <div id="slider-range-min" class="slider"></div>
+                                                        <input type="text" id="amount2" style="border:0; color:#ED7A53; font-weight:bold; box-shadow:none;" />
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+
+                                        <div class="form-row row-fluid">
+                                            <div class="span12">
+                                                <div class="row-fluid">
+                                                    <label class="form-label span4" for="slider">最大值</label>
+                                                    <div class="span8">
+                                                        <div id="slider-range-max" class="slider"></div>
+                                                        <input type="text" id="amount3" style="border:0; color:#ED7A53; font-weight:bold; box-shadow:none;" />
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+
+                                        <div class="form-row row-fluid">
+                                            <div class="span12">
+                                                <div class="row-fluid">
+                                                    <label class="form-label span4" for="slider">垂直滑动条</label>
+                                                    <div class="span8">
+                                                        <div id="eq">
+                                                            <span>88</span>
+                                                            <span>77</span>
+                                                            <span>55</span>
+                                                            <span>33</span>
+                                                            <span>40</span>
+                                                            <span>45</span>
+                                                            <span>70</span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+
+                                     
+
+                                    </form>
+
+                                </div>
+
+                            </div><!-- End .box -->
+
+                            <div class="box" style="margin-top:27px;">
+
+                                <div class="title">
+
+                                    <h4>
+                                        <span class="icon16 icomoon-icon-busy-3"></span>
+                                        <span>Ajax 读取动画</span>
+                                    </h4>
+
+                                </div>
+                                <div class="content noPad">  
+
+                                   <ul class="nav nav-tabs" id="myTabLoaders">
+                                       <li class="active"><a href="#circular">圆形 <span class="label label-info">46</span></a></li>
+                                       <li><a href="#horizontal">方形 <span class="label label-info">19</span></a></li>
+                                       <li><a href="#ThirdD">3D<span class="label label-info">7</span></a></li>
+                                    </ul>
+                                     
+                                    <div class="tab-content">
+                                       <div class="tab-pane active" id="circular">
+                                           <div class="center clearfix">
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/001.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/002.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/003.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/007.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/008.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/010.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/011.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/012.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/013.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/016.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/017.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/020.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/021.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/022.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/023.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/025.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/027.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/029.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/030.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/033.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/034.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/035.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/038.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/040.gif" alt="" />
+                                                </div>
+                                                 <div class="margin padding left">
+                                                    <img src="images/loaders/circular/041.gif" alt="" />
+                                                </div>
+                                                 <div class="margin padding left">
+                                                    <img src="images/loaders/circular/042.gif" alt="" />
+                                                </div>
+                                                 <div class="margin padding left">
+                                                    <img src="images/loaders/circular/044.gif" alt="" />
+                                                </div>
+                                                 <div class="margin padding left">
+                                                    <img src="images/loaders/circular/046.gif" alt="" />
+                                                </div>
+                                                 <div class="margin padding left">
+                                                    <img src="images/loaders/circular/047.gif" alt="" />
+                                                </div>
+                                                 <div class="margin padding left">
+                                                    <img src="images/loaders/circular/049.gif" alt="" />
+                                                </div>
+                                                 <div class="margin padding left">
+                                                    <img src="images/loaders/circular/050.gif" alt="" />
+                                                </div>
+                                                 <div class="margin padding left">
+                                                    <img src="images/loaders/circular/051.gif" alt="" />
+                                                </div>
+                                                 <div class="margin padding left">
+                                                    <img src="images/loaders/circular/052.gif" alt="" />
+                                                </div>
+                                                 <div class="margin padding left">
+                                                    <img src="images/loaders/circular/054.gif" alt="" />
+                                                </div>
+                                                 <div class="margin padding left">
+                                                    <img src="images/loaders/circular/055.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/056.gif" alt="" />
+                                                </div>
+                                                 <div class="margin padding left">
+                                                    <img src="images/loaders/circular/059.gif" alt="" />
+                                                </div>
+                                                 <div class="margin padding left">
+                                                    <img src="images/loaders/circular/060.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/061.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/064.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/065.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/066.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/068.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/069.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/070.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/circular/072.gif" alt="" />
+                                                </div>
+                                            </div>
+                                       </div>
+                                       <div class="tab-pane" id="horizontal">
+                                           <div class="center clearfix">
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/horizontal/004.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/horizontal/005.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/horizontal/006.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/horizontal/009.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/horizontal/014.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/horizontal/018.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/horizontal/024.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/horizontal/031.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/horizontal/032.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/horizontal/036.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/horizontal/037.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/horizontal/043.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/horizontal/045.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/horizontal/048.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/horizontal/053.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/horizontal/057.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/horizontal/058.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/horizontal/062.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/horizontal/063.gif" alt="" />
+                                                </div>
+                                            </div>
+
+                                       </div>
+                                       <div class="tab-pane" id="ThirdD">
+                                            <div class="center clearfix">
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/3d/015.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/3d/019.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/3d/026.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/3d/028.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/3d/039.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/3d/067.gif" alt="" />
+                                                </div>
+                                                <div class="margin padding left">
+                                                    <img src="images/loaders/3d/071.gif" alt="" />
+                                                </div>
+                                            </div>
+                                       </div>
+                                    </div>
+
+                                </div>
+
+                            </div><!-- End .box -->
+                      
+
+                        </div><!-- End .span6 -->
+
+                        <div class="span6">
+
+                            <div class="box">
+
+                                <div class="title">
+
+                                    <h4>
+                                        <span class="icon16 icomoon-icon-equalizer"></span>
+                                        <span>进度条</span>
+                                    </h4>
+
+                                </div>
+                                <div class="content">
+
+                                    <form class="form-horizontal" action="#">
+
+                                        <div class="form-row row-fluid">
+                                            <div class="span12">
+                                                <div class="row-fluid">
+                                                    <label class="form-label span4" for="slider">Jquery UI 进度条</label>
+                                                    <div class="span8">
+                                                        <div id="progressbar"></div>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+
+                                        <div class="form-row row-fluid">
+                                            <div class="span12">
+                                                <div class="row-fluid">
+                                                    <label class="form-label span4" for="slider">Boostrap进度条</label>
+                                                    <div class="span8">
+                                                        <div class="progress tip" title="60%">
+                                                          <div class="bar" style="width: 60%;"></div>
+                                                        </div>
+                                                        <span class="simple-hint"><code>.progress</code></span>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+
+                                        <div class="form-row row-fluid">
+                                            <div class="span12">
+                                                <div class="row-fluid">
+                                                    <label class="form-label span4" for="slider">Boostrap 小进度条</label>
+                                                    <div class="span8">
+                                                        <div class="progress progress-mini tip" title="60%">
+                                                          <div class="bar" style="width: 60%;"></div>
+                                                        </div>
+                                                        <span class="simple-hint"><code>.progress .progress-mini</code></span>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+
+                                        <div class="form-row row-fluid">
+                                            <div class="span12">
+                                                <div class="row-fluid">
+                                                    <label class="form-label span4" for="slider">Boostrap 性感进度条</label>
+                                                    <div class="span8">
+                                                        <div class="progress progress-striped tip" title="20%">
+                                                          <div class="bar" style="width: 20%;"></div>
+                                                        </div>
+                                                        <span class="simple-hint"><code>.progress .progress-striped</code></span>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+
+                                        <div class="form-row row-fluid">
+                                            <div class="span12">
+                                                <div class="row-fluid">
+                                                    <label class="form-label span4" for="slider">动态性感条</label>
+                                                        <span class="simple-hint red">( no IE )</span>
+                                                    </label>
+                                                    <div class="span8">
+                                                        <div class="progress progress-striped active tip" title="40%">
+                                                            <div class="bar" style="width: 40%;"></div>
+                                                        </div>
+                                                        <span class="simple-hint"><code>.progress .progress-striped</code></span>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+
+                                        <div class="form-row row-fluid">
+                                            <div class="span12">
+                                                <div class="row-fluid">
+                                                    <label class="form-label span4" for="slider">信息进度</label>
+                                                    <div class="span8">
+                                                        <div class="progress progress-info tip" title="40%">
+                                                            <div class="bar" style="width: 40%;"></div>
+                                                        </div>
+                                                        <span class="simple-hint"><code>.progress .progress-info</code></span>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+
+                                        <div class="form-row row-fluid">
+                                            <div class="span12">
+                                                <div class="row-fluid">
+                                                    <label class="form-label span4" for="slider">成功进度</label>
+                                                    <div class="span8">
+                                                        <div class="progress progress-success tip" title="50%">
+                                                            <div class="bar" style="width: 50%;"></div>
+                                                        </div>
+                                                        <span class="simple-hint"><code>.progress .progress-success</code></span>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+
+                                        <div class="form-row row-fluid">
+                                            <div class="span12">
+                                                <div class="row-fluid">
+                                                    <label class="form-label span4" for="slider">危险进度</label>
+                                                    <div class="span8">
+                                                        <div class="progress progress-danger tip" title="60%">
+                                                            <div class="bar" style="width: 60%;"></div>
+                                                        </div>
+                                                        <span class="simple-hint"><code>.progress .progress-danger</code></span>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+
+                                        <div class="form-row row-fluid">
+                                            <div class="span12">
+                                                <div class="row-fluid">
+                                                    <label class="form-label span4" for="slider">警告进度</label>
+                                                    <div class="span8">
+                                                        <div class="progress progress-warning tip" title="69%">
+                                                            <div class="bar" style="width: 69%;"></div>
+                                                        </div>
+                                                        <span class="simple-hint"><code>.progress .progress-warning</code></span>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+
+                                        <div class="form-row row-fluid">
+                                            <div class="span12">
+                                                <div class="row-fluid">
+                                                    <label class="form-label span4" for="slider">多重进度</label>
+                                                    <div class="span8">
+                                                         <div class="progress">
+                                                            <div class="bar bar-success tip" style="width: 35%" title="35%"></div>
+                                                            <div class="bar bar-info tip" style="width: 20%" title="20%"></div>
+                                                            <div class="bar bar-danger tip" style="width: 10%" title="10%"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+
+                                        <div class="form-row row-fluid">
+                                            <div class="span12">
+                                                <div class="row-fluid">
+                                                    <label class="form-label span4" for="slider">自增动态进度1</label>
+                                                    <div class="span8">
+                                                       <div id="progress1">
+                                                            <div class="pbar"></div>
+                                                            <span class="percent1"></span>
+                                                            <div class="elapsed"></div>
+                                                            <div class="clear"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+
+                                        <div class="form-row row-fluid">
+                                            <div class="span12">
+                                                <div class="row-fluid">
+                                                    <label class="form-label span4" for="slider">自增动态进度2</label>
+                                                    <div class="span8">
+                                                       <div id="progress2">
+                                                            <div class="pbar"></div>
+                                                            <span class="percent1"></span>
+                                                            <div class="elapsed"></div>
+                                                            <div class="clear"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+
+                                        <div class="form-row row-fluid">
+                                            <div class="span12">
+                                                <div class="row-fluid">
+                                                    <label class="form-label span4" for="slider">自增动态进度3</label>
+                                                    <div class="span8">
+                                                       <div id="progress3">
+                                                            <div class="pbar"></div>
+                                                            <span class="percent1"></span>
+                                                            <div class="elapsed"></div>
+                                                            <div class="clear"></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+
+                                        <div class="form-row row-fluid">
+                                            <div class="span12">
+                                                <div class="row-fluid">
+                                                    <label class="form-label span4" for="slider">环型进度</label>
+                                                    <div class="span8">
+                                                       <div class="circular-item tipB" title="站点负载">
+                                                            <span class="icon icomoon-icon-fire"></span>
+                                                            <input type="text" value="62" class="redCircle" />
+                                                        </div>
+
+                                                        <div class="circular-item tipB" title="载入速度">
+                                                            <span class="icon icomoon-icon-busy"></span>
+                                                            <input type="text" value="12" class="blueCircle" />
+                                                        </div>
+
+                                                        <div class="circular-item tipB" title="目标转化">
+                                                            <span class="icon icomoon-icon-target-2"></span>
+                                                            <input type="text" value="94" class="greenCircle" />
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>  
+                                        </div>
+
+                                    </form>
+
+                                </div>
+
+                            </div><!-- End .box -->
+
+                        </div><!-- End .span6 -->
+                        
+                    </div><!-- End .row-fluid -->
+
+                    <div class="row-fluid">
+
+                        <div class="span6">
+
+                            <div class="box">
+
+                                <div class="title">
+
+                                    <h4>
+                                        <span class="icon16  icomoon-icon-comments-8"></span>
+                                        <span>按钮提示</span>
+                                    </h4>
+                                   
+                                </div>
+                                <div class="content">
+                                    <div class="center">
+
+                                        <div class="page-header">
+                                            <h4>QTip提示 <small> tooltip插件</small></h4>
+                                       </div>
+
+                                       <a href="#" class="btn tip marginR10 marginB10" title="提醒在上">提醒在上</a>
+                                       <a href="#" class="btn tipR marginR10 marginB10" title="提醒在右">提醒在右</a>
+                                       <a href="#" class="btn tipB marginR10 marginB10" title="提醒在下">提醒在下</a>
+                                       <a href="#" class="btn tipL marginR10 marginB10" title="提醒在左">提醒在左</a>
+
+                                       <div class="page-header">
+                                            <h4>Boostrap 提醒</h4>
+                                       </div>
+
+                                       <a href="#" class="btn btip marginR10 marginB10" rel="tooltip" data-placement="top" data-original-title="提醒在上">提醒在上</a>
+                                       <a href="#" class="btn btip marginR10 marginB10" rel="tooltip" data-placement="right" data-original-title="提醒在右">提醒在右</a>
+                                       <a href="#" class="btn btip marginR10 marginB10" rel="tooltip" data-placement="bottom" data-original-title="提醒在下">提醒在下</a>
+                                       <a href="#" class="btn btip marginR10 marginB10" rel="tooltip" data-placement="left" data-original-title="提醒在左">提醒在左</a>
+
+                                       <div class="page-header">
+                                            <h4>弹出式提醒 </h4>
+                                       </div>
+                                       <a href="#" class="btn btn-danger marginR10 marginB10" rel="popoverTop" data-content="夺么醒目的弹出啊！！！你说呢？?" data-original-title="标题">提醒在上</a>
+                                       <a href="#" class="btn btn-danger marginR10 marginB10" rel="popover" data-content="夺么醒目的弹出啊！！！你说呢？?" data-original-title="标题" data-placement="left">提醒在左</a>
+                                       <a href="#" class="btn btn-danger marginR10 marginB10" rel="popover" data-content="夺么醒目的弹出啊！！！你说呢？?" data-original-title="标题" data-placement="right">提醒在右</a>
+                                       <a href="#" class="btn btn-danger marginR10 marginB10" rel="popover" data-content="夺么醒目的弹出啊！！！你说呢？?" data-original-title="标题" data-placement="bottom">提醒在下</a>
+                                   </div>
+                                </div>
+
+                            </div><!-- End .box -->
+
+                        </div><!-- End .span6 -->
+
+                        <div class="span6">
+
+                            <div class="box">
+
+                                <div class="title">
+
+                                    <h4>
+                                        <span class="icon16 icomoon-icon-comments-15"></span>
+                                        <span>对话框</span>
+                                    </h4>
+                                    
+                                </div>
+                                <div class="content">
+
+                                    <div class="center">
+                                        <a href="#" class="btn marginR10 marginB10" id="openDialog">对话框</a>
+                                        <a href="#" class="btn marginR10 marginB10" id="openModalDialog">又一个对话框</a>
+                                        <a href="#myModal" class="btn marginR10 marginB10" data-toggle="modal">富文本对话框</a>
+                                    </div>
+                                    
+                                    <!-- ui dialog -->
+                                    <div id="dialog" title="标题" class="dialog">
+                                        <p>老夫聊发少年狂，左牵黄，右擎苍。锦帽貂裘，千骑卷平冈。为报倾城随太守，亲射虎，看孙郎。
+酒酣胸胆尚开张，鬓微霜，又何妨！持节云中，何日遣冯唐？会挽雕弓如满月，西北旺，射天狼。</p>
+                                    </div>
+
+                                    <!-- ui modal dialog -->
+                                    <div id="modal" title="标题" class="dialog">
+                                        <p>老夫聊发少年狂，左牵黄，右擎苍。锦帽貂裘，千骑卷平冈。为报倾城随太守，亲射虎，看孙郎。
+酒酣胸胆尚开张，鬓微霜，又何妨！持节云中，何日遣冯唐？会挽雕弓如满月，西北旺，射天狼。</p>
+                                    </div>
+
+                                    <!-- Boostrap modal dialog -->
+                                    <div id="myModal" class="modal hide fade" style="display: none; ">
+                                        <div class="modal-header">
+                                          <button type="button" class="close" data-dismiss="modal"><span class="icon12 minia-icon-close"></span></button>
+                                          <h3>标题</h3>
+                                        </div>
+                                        <div class="modal-body">
+                                            <div class="paddingT15 paddingB15">    
+                                              <h4>标题</h4>
+                                              <p>下面是富文本对话框的演示</p>
+                                              <h4>对话框</h4>
+                                              <p>这个<a href="#" class="btn popover-test" data-content="夺么醒目的弹出啊！！！你说呢？?" data-original-title="标题">按钮</a> 鼠标移动至此可以弹框.</p>
+
+                                              <h4>提示</h4>
+                                              <p><a href="#" class="tip" title="提示">这个链接</a>和<a href="#" class="tip" title="提示">这个链接</a> 鼠标移动至此可出现提示.</p>
+
+                                              <hr />
+
+                                              <h4>文本超出将自动显示滚动条</h4>
+                                              <p>这里设置了 <code>max-height</code> 位置在 <code>.modal-body</code>类.</p>
+                                              <p>老夫聊发少年狂，左牵黄，右擎苍。锦帽貂裘，千骑卷平冈。为报倾城随太守，亲射虎，看孙郎。
+酒酣胸胆尚开张，鬓微霜，又何妨！持节云中，何日遣冯唐？会挽雕弓如满月，西北旺，射天狼.</p>
+
+                                              <p>老夫聊发少年狂，左牵黄，右擎苍。锦帽貂裘，千骑卷平冈。为报倾城随太守，亲射虎，看孙郎。
+酒酣胸胆尚开张，鬓微霜，又何妨！持节云中，何日遣冯唐？会挽雕弓如满月，西北旺，射天狼.</p>
+
+                                              <p>老夫聊发少年狂，左牵黄，右擎苍。锦帽貂裘，千骑卷平冈。为报倾城随太守，亲射虎，看孙郎。
+酒酣胸胆尚开张，鬓微霜，又何妨！持节云中，何日遣冯唐？会挽雕弓如满月，西北旺，射天狼.</p>
+
+                                              <p>老夫聊发少年狂，左牵黄，右擎苍。锦帽貂裘，千骑卷平冈。为报倾城随太守，亲射虎，看孙郎。
+酒酣胸胆尚开张，鬓微霜，又何妨！持节云中，何日遣冯唐？会挽雕弓如满月，西北旺，射天狼.</p>
+
+                                              <p>老夫聊发少年狂，左牵黄，右擎苍。锦帽貂裘，千骑卷平冈。为报倾城随太守，亲射虎，看孙郎。
+酒酣胸胆尚开张，鬓微霜，又何妨！持节云中，何日遣冯唐？会挽雕弓如满月，西北旺，射天狼.</p>
+                                            </div>
+                                    
+                                        </div>
+                                        <div class="modal-footer">
+                                          <a href="#" class="btn" data-dismiss="modal">关闭</a>
+                                          <a href="#" class="btn btn-primary">保存</a>
+                                        </div>
+                                      </div>
+
+                                </div>
+
+                            </div><!-- End .box -->
+
+                        </div><!-- End .span6 -->
+
+                        <div class="span6">
+
+                            <div class="box">
+
+                                <div class="title">
+                                    <h4><span>浮窗通知</span></h4>  
+                                </div>
+
+                                <div class="content">
+                                    
+                                     <div class="center">
+                                        <a href="#" class="btn marginR10 marginB10" id="noticeR">提示</a>
+                                        <a href="#" class="btn marginR10 marginB10" id="noticeS">提示</a> 
+                                        <a href="#" class="btn marginR10 marginB10" id="infoR">通知</a> 
+                                        <a href="#" class="btn marginR10 marginB10" id="infoS">通知</a> 
+                                        <a href="#" class="btn marginR10 marginB10" id="successR">成功</a> 
+                                        <a href="#" class="btn marginR10 marginB10" id="successS">成功</a> 
+                                        <a href="#" class="btn marginR10 marginB10" id="errorR">错误</a> 
+                                        <a href="#" class="btn marginR10 marginB10" id="errorS">错误</a> 
+
+                                    </div>
+                                </div>
+
+                            </div><!-- End .box -->
+
+                        </div><!-- End .span6 -->
+
+                    </div><!-- End .row-fluid -->
+
+                    <div class="row-fluid"> 
+                        <div class="span6">
+                            <div class="page-header">
+                                <h4>图片样式</h4>                            
+                            </div>
+                            <div style="margin-bottom: 27px;">
+
+                                <img src="http://placehold.it/140x140" class="img-rounded marginR10">
+                                <img src="http://placehold.it/140x140" class="img-circle marginR10">
+                                <img src="http://placehold.it/140x140" class="img-polaroid marginR10">
+                                 
+                                 <pre class="prettyprint marginT10"><ol class="linenums"><li class="L0"><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"..."</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"img-rounded"</span><span class="tag">&gt;</span></li><li class="L1"><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"..."</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"img-circle"</span><span class="tag">&gt;</span></li><li class="L2"><span class="tag">&lt;img</span><span class="pln"> </span><span class="atn">src</span><span class="pun">=</span><span class="atv">"..."</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"img-polaroid"</span><span class="tag">&gt;</span></li></ol></pre>
+                            </div>
+                        </div><!-- End .span6 -->
+
+                        <div class="span6">
+
+                            <div class="page-header">
+                                <h4>导航框</h4>                            
+                            </div>
+
+                            <div class="hero-unit">
+                               <h1>欢迎到来!</h1>
+                               <p>这是一个新型的管理面板前端框架，我给它起了个性格的名字叫admeen。但愿，它能成为提高开发效率的神器一枚。</p>
+                               <p><a class="btn btn-primary btn-large">查看详情</a></p>
+                            </div>
+
+                        </div><!-- End .span6 -->
+
+                    </div><!-- End .row-fluid -->
+
+                    <div class="row-fluid">
+
+                        <div class="span6">
+                            <div class="page-header">
+                                <h4>横向导航</h4>                            
+                            </div>
+
+                            <ul class="nav nav-pills">
+                               <li class="active"><a href="#">首页</a></li>
+                               <li><a href="#">资料</a></li>
+                               <li><a href="#">私信</a></li>
+                            </ul>
+
+                            <div class="page-header">
+                                <h4>纵向导航</h4>                            
+                            </div>
+
+                            <ul class="nav nav-pills nav-stacked">
+                                <li class="active"><a href="#">首页</a></li>
+                               <li><a href="#">资料</a></li>
+                               <li><a href="#">私信</a></li>
+                            </ul>
+
+                        </div><!-- End .span6 -->
+
+                        <div class="span6">
+
+                            <div class="page-header">
+                                <h4>小背景</h4>                            
+                            </div>
+
+                            <div class="well">
+                               我有一个小背景
+                            </div>
+
+                            <div class="page-header">
+                                <h4>大背景</h4>                            
+                            </div>
+                            <div class="well well-large">我的后面是一个大背景                            </div>
+
+                            <div class="page-header">
+                                <h4>微型背景</h4>                            
+                            </div>
+
+                            <div class="well well-small">
+                               小的都要看不见了
+                            </div>
+
+                        </div><!-- End .span6 -->
+
+                    </div><!-- End .row-fluid -->
+
+                    <div class="row-fluid"> 
+                        <div class="span12">
+                            <div class="row-fluid">
+                                <div class="span4">
+                                     <div class="page-header">
+                                        <h4>页码</h4>
+                                    </div>
+                                    <div class="center">
+                                        <div class="pagination">
+                                          <ul>
+                                            <li><a href="#"><span class="icon12 minia-icon-arrow-left-3"></span></a></li>
+                                            <li class="active">
+                                              <a href="#">1</a>
+                                            </li>
+                                            <li><span>...</span></li>
+                                            <li><a href="#">2</a></li>
+                                            <li><a href="#">3</a></li>
+                                            <li><a href="#">4</a></li>
+                                            <li><a href="#"><span class="icon12 minia-icon-arrow-right-3"></span></a></li>
+                                          </ul>
+                                        </div>
+                                    </div>
+                                </div><!-- End .span4 -->
+
+                                <div class="span4">
+                                    <div class="page-header">
+                                        <h4>翻页</h4>
+                                    </div>
+                                   
+                                    <ul class="pager">
+                                        <li>
+                                            <a href="#">上一页</a>
+                                        </li>
+                                         <li>
+                                            <a href="#">下一页</a>
+                                        </li>
+                                    </ul>
+                                   
+                                </div><!-- End .span4 -->
+
+                                <div class="span4">
+                                    <div class="page-header">
+                                        <h4>首尾翻页</h4>
+                                    </div>
+                                    
+                                    <ul class="pager">
+                                        <li class="previous">
+                                            <a href="#">&larr; 最旧</a>
+                                        </li>
+                                        <li class="next">
+                                            <a href="#">最新 &rarr;</a>
+                                        </li>
+                                    </ul>
+                                    
+                                </div><!-- End .span4 -->
+                            </div><!-- End .row-fluid -->
+                        </div><!-- End .span12 -->                  
+                    </div><!-- End .row-fluid -->
+               
+                <!-- Page end here -->
+                    
+                <div class="modal fade hide" id="myModal1">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span class="icon12 minia-icon-close"></span></button>
+                        <h3>Chat layout</h3>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="messages">
+                            <li class="user clearfix">
+                                <a href="#" class="avatar">
+                                    <img src="images/avatar2.jpeg" alt="" />
+                                </a>
+                                <div class="message">
+                                    <div class="head clearfix">
+                                        <span class="name"><strong>Lazar</strong> says:</span>
+                                        <span class="time">25 seconds ago</span>
+                                    </div>
+                                    <p>
+                                        Time to go i call you tomorrow.
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="admin clearfix">
+                                <a href="#" class="avatar">
+                                    <img src="images/avatar3.jpeg" alt="" />
+                                </a>
+                                <div class="message">
+                                    <div class="head clearfix">
+                                        <span class="name"><strong>Sugge</strong> says:</span>
+                                        <span class="time">just now</span>
+                                    </div>
+                                    <p>
+                                        OK, have a nice day.
+                                    </p>
+                                </div>
+                            </li>
+
+                            <li class="sendMsg">
+                                <form class="form-horizontal" action="#">
+                                    <textarea class="elastic" id="textarea" rows="1" placeholder="Enter your message ..." style="width:98%;"></textarea>
+                                    <button type="submit" class="btn btn-info marginT10">Send message</button>
+                                </form>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    <div class="modal-footer">
+                        <a href="#" class="btn" data-dismiss="modal">Close</a>
+                    </div>
+                </div>
+                
+            </div><!-- End contentwrapper -->
+        </div><!-- End #content -->
+    
+    </div><!-- End #wrapper -->
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Important plugins put in all pages -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap/bootstrap.js"></script>  
+    <script type="text/javascript" src="js/jquery.cookie.js"></script>
+    <script type="text/javascript" src="js/jquery.mousewheel.js"></script>
+
+    <!-- Charts plugins -->
+    <script type="text/javascript" src="plugins/charts/sparkline/jquery.sparkline.min.js"></script><!-- Sparkline plugin -->
+    <script type="text/javascript" src="plugins/charts/knob/jquery.knob.js"></script><!-- Circular sliders and stats -->
+   
+    <!-- Misc plugins -->
+    <script type="text/javascript" src="plugins/misc/prettify/prettify.js"></script><!-- Code view plugin -->
+    <script type="text/javascript" src="plugins/misc/qtip/jquery.qtip.min.js"></script><!-- Custom tooltip plugin -->
+    <script type="text/javascript" src="plugins/misc/animated-progress-bar/jquery.progressbar.js"></script>
+    <script type="text/javascript" src="plugins/misc/pnotify/jquery.pnotify.min.js"></script>
+    <script type="text/javascript" src="plugins/misc/totop/jquery.ui.totop.min.js"></script> 
+
+    <!-- Search plugin -->
+    <script type="text/javascript" src="plugins/misc/search/tipuesearch_set.js"></script>
+    <script type="text/javascript" src="plugins/misc/search/tipuesearch_data.js"></script><!-- JSON for searched results -->
+    <script type="text/javascript" src="plugins/misc/search/tipuesearch.js"></script>
+
+    <!-- Form plugins -->
+    <script type="text/javascript" src="plugins/forms/watermark/jquery.watermark.min.js"></script>
+    <script type="text/javascript" src="plugins/forms/uniform/jquery.uniform.min.js"></script>
+        
+    <!-- Fix plugins -->
+    <script type="text/javascript" src="plugins/fix/ios-fix/ios-orientationchange-fix.js"></script>
+    
+    <!-- Important Place before main.js  -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="plugins/fix/touch-punch/jquery.ui.touch-punch.min.js"></script><!-- Unable touch for JQueryUI -->
+
+    <!-- Init plugins -->
+    <script type="text/javascript" src="js/main.js"></script><!-- Core js functions -->
+    <script type="text/javascript" src="js/elements.js"></script><!-- Init plugins only for page -->
+   
+    </body>
+</html>

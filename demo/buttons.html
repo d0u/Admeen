@@ -1,0 +1,871 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=utf-8" />
+    <title>Admeen Framework</title>
+    <meta content="lu" name="author" />
+    <meta content="Supr admin template - new premium responsive admin template. This template is designed to help you build the site administration without losing valuable time.Template contains all the important functions which must have one backend system.Build on great twitter boostrap framework"
+
+      name="description" />
+    <meta content="admin, admin template, admin theme, responsive, responsive admin, responsive admin template, responsive theme, themeforest, 960 grid system, grid, grid theme, liquid, masonry, jquery, administration, administration template, administration theme, mobile, touch , responsive layout, boostrap, twitter boostrap"
+
+      name="keywords" />
+    <meta content="Supr admin template" name="application-name" />
+    <!-- Mobile Specific Metas -->
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <!-- Le styles -->
+    <!-- Use new way for google web fonts 
+    http://www.smashingmagazine.com/2012/07/11/avoiding-faux-weights-styles-google-web-fonts -->
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans:400,700" />
+    <!-- Headings -->
+    <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Droid+Sans:400,700" />
+    <!-- Text -->
+    <!--[if lt IE 9]>
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400" rel="stylesheet" type="text/css" />    <link href="http://fonts.googleapis.com/css?family=Open+Sans:700" rel="stylesheet" type="text/css" />
+    <link href="http://fonts.googleapis.com/css?family=Droid+Sans:400" rel="stylesheet" type="text/css" />    <link href="http://fonts.googleapis.com/css?family=Droid+Sans:700" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!-- Core stylesheets do not remove -->
+    <link type="text/css" rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/bootstrap/bootstrap-responsive.min.css" />
+    <link type="text/css" rel="stylesheet" href="css/supr-theme/jquery.ui.supr.css" />
+    <link type="text/css" rel="stylesheet" href="css/icons.css" />
+    <!-- Plugin stylesheets -->
+    <link type="text/css" rel="stylesheet" href="plugins/misc/qtip/jquery.qtip.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/misc/prettify/prettify.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/forms/uniform/uniform.default.css" />
+    <!-- Main stylesheets -->
+    <link type="text/css" rel="stylesheet" href="css/main.css" />
+    <!-- Custom stylesheets ( Put your own changes here ) -->
+    <link type="text/css" rel="stylesheet" href="css/custom.css" />
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>    <![endif]-->
+    <!-- Le fav and touch icons -->
+    <link href="images/favicon.ico" rel="shortcut icon" />
+    <link href="images/apple-touch-icon-144-precomposed.png" sizes="144x144" rel="apple-touch-icon-precomposed" />
+    <link href="images/apple-touch-icon-114-precomposed.png" sizes="114x114" rel="apple-touch-icon-precomposed" />
+    <link href="images/apple-touch-icon-72-precomposed.png" sizes="72x72" rel="apple-touch-icon-precomposed" />
+    <link href="images/apple-touch-icon-57-precomposed.png" rel="apple-touch-icon-precomposed" />
+    <script type="text/javascript">
+        //adding load class to body and hide page
+        document.documentElement.className += 'loadstate';
+    </script>
+  </head>
+  <body>
+    <!-- loading animation -->
+    <div id="qLoverlay"></div>
+    <div id="qLbar"></div>
+    <div id="header">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <div class="container-fluid"> <a href="dashboard.html" class="brand">Admeen.<span
+
+                class="slogan">framework</span></a>
+            <div class="nav-no-collapse">
+              <ul class="nav">
+                <li class="active"><a href="dashboard.html"><span class="icon16 icomoon-icon-screen-2"></span>
+                    主面板</a></li>
+                <li class="dropdown"> <a data-toggle="dropdown" class="dropdown-toggle"
+
+                    href="#"> <span class="icon16 icomoon-icon-cog"></span> 设置
+                    <b class="caret"></b> </a>
+                  <ul class="dropdown-menu">
+                    <li class="menu">
+                      <ul>
+                        <li> <a href="#"><span class="icon16 icomoon-icon-equalizer"></span>站
+                            点配置</a> </li>
+                        <li> <a href="#"><span class="icon16 icomoon-icon-wrench"></span>插
+                            件</a> </li>
+                        <li> <a href="#"><span class="icon16 icomoon-icon-picture-2"></span>主
+                            题</a> </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown"> <a data-toggle="dropdown" class="dropdown-toggle"
+
+                    href="#"> <span class="icon16 icomoon-icon-mail-3"></span>消
+                    息 <span class="notification">8</span> </a>
+                  <ul class="dropdown-menu">
+                    <li class="menu">
+                      <ul class="messages">
+                        <li class="header"><strong>共有消息</strong>(10)邮件, (2)私信</li>
+                        <li> <span class="icon"><span class="icon16 icomoon-icon-user-3"></span></span>
+                          <span class="name"><a href="#myModal1" data-toggle="modal"><strong>赵
+                                本山</strong></a><span class="time">35 分钟前</span></span>
+                          <span class="msg">我有一个问题想问 ...</span> </li>
+                        <li> <span class="icon avatar"><img alt="" src="images/avatar.jpg" /></span>
+                          <span class="name"><a href="#myModal1" data-toggle="modal"><strong>林
+                                志玲</strong></a><span class="time">2 小时前</span></span>
+                          <span class="msg">你知不知道我暗恋了你多少年，我 ...</span> </li>
+                        <li> <span class="icon"><span class="icon16 icomoon-icon-mail-3"></span></span>
+                          <span class="name"><a href="#myModal1" data-toggle="modal"><strong>马
+                                化腾</strong></a><span class="time">1 天前</span></span>
+                          <span class="msg">鲁总，我很看好你，请问您有收购腾讯的意向么 ...</span> </li>
+                        <li class="view-all"><a href="#">查看全部消息 <span class="icon16 icomoon-icon-arrow-right-8"></span></a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+              <ul class="nav pull-right usernav">
+                <li class="dropdown"> <a data-toggle="dropdown" class="dropdown-toggle"
+
+                    href="#"> <span class="icon16 icomoon-icon-bell-2"></span><span
+
+                      class="notification">3</span> </a>
+                  <ul class="dropdown-menu">
+                    <li class="menu">
+                      <ul class="notif">
+                        <li class="header"><strong>提醒</strong> (3)</li>
+                        <li> <a href="#"> <span class="icon"><span class="icon16 icomoon-icon-user-3"></span></span>
+                            <span class="event">1个新用户注册</span> </a> </li>
+                        <li> <a href="#"> <span class="icon"><span class="icon16 icomoon-icon-comments-4"></span></span>
+                            <span class="event">会员小王添加了评论</span> </a> </li>
+                        <li> <a href="#"> <span class="icon"><span class="icon16 icomoon-icon-new-2"></span></span>
+                            <span class="event">管理员 lee 发帖违规</span> </a> </li>
+                        <li class="view-all"><a href="#">查看全部提醒 <span class="icon16 icomoon-icon-arrow-right-8"></span></a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li class="dropdown"> <a data-toggle="dropdown" class="dropdown-toggle avatar"
+
+                    href="#"> <img class="image" alt="" src="images/avatar.jpg" />
+                    <span class="txt">admeen@admin</span> <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                    <li class="menu">
+                      <ul>
+                        <li> <a href="#"><span class="icon16 icomoon-icon-user-3"></span>个
+                            人资料</a> </li>
+                        <li> <a href="#"><span class="icon16 icomoon-icon-comments-2"></span>审
+                            核评论</a> </li>
+                        <li> <a href="#"><span class="icon16 icomoon-icon-plus-2"></span>添
+                            加用户</a> </li>
+                      </ul>
+                    </li>
+                  </ul>
+                </li>
+                <li><a href="index.html"><span class="icon16 icomoon-icon-exit"></span>
+                    退出</a></li>
+              </ul>
+            </div>
+            <!-- /.nav-collapse --> </div>
+        </div>
+        <!-- /navbar-inner --> </div>
+      <!-- /navbar --> </div>
+    <!-- End #header -->
+    <div id="wrapper">
+      <!--Responsive navigation button-->
+      <div class="resBtn"> <a href="#"><span class="icon16 minia-icon-list-3"></span></a>
+      </div>
+      <!--Sidebar collapse button-->
+      <div class="collapseBtn leftbar"> <a title="隐藏侧边栏" class="tipR" href="#"><span
+
+            class="icon12 minia-icon-layout"></span></a> </div>
+      <!--Sidebar background-->
+      <div id="sidebarbg"></div>
+      <!--Sidebar content-->
+      <div id="sidebar">
+        <div class="shortcuts">
+          <ul>
+            <li><a class="tip" title="客户支持" href="support.html"><span class="icon24 icomoon-icon-support"></span></a><br />
+            </li>
+            <li><a class="tip" title="数据库备份" href="#"><span class="icon24 icomoon-icon-database"></span></a><br />
+            </li>
+            <li><a class="tip" title="销售统计" href="charts.html"><span class="icon24 icomoon-icon-pie-2"></span></a><br />
+            </li>
+            <li><a class="tip" title="发表文章" href="#"><span class="icon24 icomoon-icon-pencil"></span></a><br />
+            </li>
+          </ul>
+        </div>
+        <!-- End search -->
+        <div class="sidenav">
+          <div style="margin: -1px 0 0 0;" class="sidebar-widget">
+            <h5 style="margin-bottom:0" class="title">功能导航</h5>
+          </div>
+          <!-- End .sidenav-widget -->
+          <div class="mainnav">
+            <ul>
+              <li><a href="charts.html"><span class="icon16 icomoon-icon-stats-up"></span>图
+                  表</a></li>
+              <li> <a href="#"><span class="icon16 icomoon-icon-list-view-2"></span>表
+                  单</a>
+                <ul class="sub">
+                  <li><a href="forms.html"><span class="icon16 icomoon-icon-file"></span>表
+                      单项</a></li>
+                  <li><a href="forms-validation.html"><span class="icon16 icomoon-icon-file"></span>表
+                      单验证</a></li>
+                </ul>
+              </li>
+              <li> <a href="#"><span class="icon16 icomoon-icon-grid"></span>表
+                  格</a>
+                <ul class="sub">
+                  <li><a href="tables.html"><span class="icon16 icomoon-icon-arrow-right-2"></span>静
+                      态表</a></li>
+                  <li><a href="data-table.html"><span class="icon16 icomoon-icon-arrow-right-2"></span>数
+                      据表</a></li>
+                </ul>
+              </li>
+              <li> <a href="#"><span class="icon16 icomoon-icon-equalizer-2"></span>UI
+                  元素</a>
+                <ul class="sub">
+                  <li><a href="icons.html"><span class="icon16 icomoon-icon-rocket"></span>图
+                      标</a></li>
+                  <li><a href="buttons.html"><span class="icon16 icomoon-icon-file"></span>按
+                      钮</a></li>
+                  <li><a href="elements.html"><span class="icon16 icomoon-icon-cogs"></span>其
+                      它</a></li>
+                </ul>
+              </li>
+              <li><a href="typo.html"><span class="icon16 icomoon-icon-font"></span>排
+                  版</a></li>
+              <li><a href="grid.html"><span class="icon16 icomoon-icon-grid-view"></span>网
+                  格</a></li>
+              <li><a href="calendar.html"><span class="icon16 icomoon-icon-calendar"></span>日
+                  程表</a></li>
+              <li> <a href="widgets.html"><span class="icon16 icomoon-icon-cube"></span>小
+                  工具<span class="notification green">34</span></a> </li>
+              <li><a href="file.html"><span class="icon16 icomoon-icon-upload"></span>文
+                  件管理</a></li>
+              <li> <a href="#"><span class="icon16 icomoon-icon-file"></span>错误
+                  页面<span class="notification">6</span></a>
+                <ul class="sub">
+                  <li><a href="403.html"><span class="icon16 icomoon-icon-file"></span>403</a></li>
+                  <li><a href="404.html"><span class="icon16 icomoon-icon-file"></span>404</a></li>
+                  <li><a href="405.html"><span class="icon16 icomoon-icon-file"></span>405</a></li>
+                  <li><a href="500.html"><span class="icon16 icomoon-icon-file"></span>500</a></li>
+                  <li><a href="503.html"><span class="icon16 icomoon-icon-file"></span>Error
+                      503</a></li>
+                  <li><a href="offline.html"><span class="icon16 icomoon-icon-file"></span>建
+                      设中提醒</a></li>
+                </ul>
+              </li>
+              <li> <a href="#"><span class="icon16 icomoon-icon-box"></span>其它页
+                  面<span class="notification blue">10</span></a>
+                <ul class="sub">
+                  <li><a href="invoice.html"><span class="icon16 icomoon-icon-file"></span>订
+                      单页面</a></li>
+                  <li><a href="profile.html"><span class="icon16 icomoon-icon-file"></span>用
+                      户资料</a></li>
+                  <li><a href="search.html"><span class="icon16 icomoon-icon-search-3"></span>搜
+                      索页面</a></li>
+                  <li><a href="email.html"><span class="icon16 icomoon-icon-mail-3"></span>邮
+                      箱页面</a></li>
+                  <li><a href="support.html"><span class="icon16  icomoon-icon-support"></span>客
+                      服页面</a></li>
+                  <li><a href="faq.html"><span class="icon16 icomoon-icon-flag-3"></span>FAQ
+                      页面</a></li>
+                  <li><a href="structure.html"><span class="icon16 icomoon-icon-file"></span>脑
+                      补页面</a></li>
+                  <li><a href="fixed-topbar.html"><span class="icon16 icomoon-icon-file"></span>头
+                      部固定</a></li>
+                  <li><a href="right-sidebar.html"><span class="icon16 icomoon-icon-file"></span>右
+                      侧边栏</a></li>
+                  <li><a href="two-sidebars.html"><span class="icon16 icomoon-icon-file"></span>双
+                      侧边栏</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <!-- End sidenav -->
+        <div class="sidebar-widget">
+          <h5 class="title">月流量使用</h5>
+          <div class="content"> <span class="icon16 icomoon-icon-loop left"></span>
+            <div title="87%" class="progress progress-mini progress-danger left tip">
+              <div style="width: 87%;" class="bar"></div>
+            </div>
+            <span class="percent">87%</span>
+            <div class="stat">19419.94 / 12000 MB</div>
+          </div>
+        </div>
+        <!-- End .sidenav-widget -->
+        <div class="sidebar-widget">
+          <h5 class="title">磁盘使用量</h5>
+          <div class="content"> <span class="icon16 icomoon-icon-drive left"></span>
+            <div title="16%" class="progress progress-mini progress-success left tip">
+              <div style="width: 16%;" class="bar"></div>
+            </div>
+            <span class="percent">16%</span>
+            <div class="stat">304.44 / 8000 MB</div>
+          </div>
+        </div>
+        <!-- End .sidenav-widget -->
+        <div class="sidebar-widget">
+          <h5 class="title">广告统计</h5>
+          <div class="content">
+            <div class="stats">
+              <div class="item">
+                <div class="head clearfix">
+                  <div class="txt">展示量</div>
+                </div>
+                <span class="icon16 icomoon-icon-eye left"></span>
+                <div class="number">21,501</div>
+                <div class="change"> <span class="icon24 icomoon-icon-arrow-up-2 green"></span>
+                  5% </div>
+                <span class="spark" id="stat1"></span> </div>
+              <div class="item">
+                <div class="head clearfix">
+                  <div class="txt">点击量</div>
+                </div>
+                <span class="icon16 icomoon-icon-thumbs-up left"></span>
+                <div class="number">308</div>
+                <div class="change"> <span class="icon24 icomoon-icon-arrow-down-2 red"></span>
+                  8% </div>
+                <span class="spark" id="stat2"></span> </div>
+              <div class="item">
+                <div class="head clearfix">
+                  <div class="txt">转化率</div>
+                </div>
+                <span class="icon16 icomoon-icon-heart left"></span>
+                <div class="number">4%</div>
+                <div class="change"> <span class="icon24 icomoon-icon-arrow-down-2 red"></span>
+                  1% </div>
+                <span class="spark" id="stat3"></span> </div>
+              <div class="item">
+                <div class="head clearfix">
+                  <div class="txt">佣金</div>
+                </div>
+                <span class="icon16 icomoon-icon-coin left"></span>
+                <div class="number">￥376</div>
+                <div class="change"> <span class="icon24 icomoon-icon-arrow-up-2 green"></span>
+                  26% </div>
+                <span class="spark" id="stat4"></span> </div>
+            </div>
+          </div>
+        </div>
+        <!-- End .sidenav-widget -->
+        <div class="sidebar-widget">
+          <h5 class="title">内容统计</h5>
+          <div class="content">
+            <div class="rightnow">
+              <ul class="unstyled">
+                <li><span class="number">34</span><span class="icon16 icomoon-icon-new-2"></span>帖
+                  子</li>
+                <li><span class="number">7</span><span class="icon16 icomoon-icon-file"></span>页
+                  面</li>
+                <li><span class="number">14</span><span class="icon16 icomoon-icon-list-view"></span>目
+                  录</li>
+                <li><span class="number">201</span><span class="icon16 icomoon-icon-tag"></span>标
+                  签</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <!-- End .sidenav-widget --> </div>
+      <!-- End #sidebar -->
+      <!--Body content-->
+      <div class="clearfix" id="content">
+        <div class="contentwrapper"><!--Content wrapper-->
+          <div class="heading">
+            <h3>按钮</h3>
+            <div class="resBtnSearch"> <a href="#"><span class="icon16 icomoon-icon-search-3"></span></a>
+            </div>
+            <div class="search">
+              <form action="search.html" id="searchform"> <input type="text" placeholder="搜索"
+
+                  class="top-search" id="tipue_search_input" /> <input type="submit"
+
+                  value="" class="search-btn" id="tipue_search_button" /> </form>
+            </div>
+            <!-- End search -->
+            <ul class="breadcrumb">
+              <li>你的位置:</li>
+              <li> <a title="返回主面板" class="tip" href="#"> <span class="icon16 icomoon-icon-screen-2"></span>
+                </a> <span class="divider"> <span class="icon16 icomoon-icon-arrow-right-2"></span>
+                </span> </li>
+              <li class="active">按钮</li>
+            </ul>
+          </div>
+          <!-- End .heading-->
+          <!-- Build page from here: Usual with <div class="row-fluid"></div> -->
+          <div class="row-fluid">
+            <div class="span6">
+              <div class="page-header">
+                <h4>普通按钮</h4>
+              </div>
+              <div class="row-fluid">
+                <div class="span4">
+                  <p><code>btn</code></p>
+                  <button class="btn">Default</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-primary</code></p>
+                  <button href="#" class="btn btn-primary">Primary</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-info</code></p>
+                  <button href="#" class="btn btn-info">Info</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 --> </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid">
+                <div class="span4">
+                  <p><code>btn btn-success</code></p>
+                  <button href="#" class="btn btn-success">Success</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-warning</code></p>
+                  <button href="#" class="btn btn-warning">Warning</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-danger</code></p>
+                  <button href="#" class="btn btn-danger">Danger</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 --> </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid">
+                <div class="span4">
+                  <p><code>btn btn-inverse</code></p>
+                  <button href="#" class="btn btn-inverse">Inverse</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-link</code></p>
+                  <button class="btn btn-link" type="button">Link button</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 --> </div>
+              <!-- End .row-fluid --> </div>
+            <!-- End .span6 -->
+            <div class="span6">
+              <div class="page-header">
+                <h4>小按钮</h4>
+              </div>
+              <div class="row-fluid">
+                <div class="span4">
+                  <p><code>btn btn-mini</code></p>
+                  <button href="#" class="btn btn-mini">Default</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-primary btn-mini</code></p>
+                  <button href="#" class="btn btn-primary btn-mini">Primary</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-info btn-mini</code></p>
+                  <button href="#" class="btn btn-info btn-mini">Info</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 --> </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid">
+                <div class="span4">
+                  <p><code>btn btn-success btn-mini</code></p>
+                  <button href="#" class="btn btn-success btn-mini">Success</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-warning btn-mini</code></p>
+                  <button href="#" class="btn btn-warning btn-mini">Warning</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-danger btn-mini</code></p>
+                  <button href="#" class="btn btn-danger btn-mini">Danger</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 --> </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid">
+                <div class="span4">
+                  <p><code>btn btn-inverse btn-mini</code></p>
+                  <button href="#" class="btn btn-inverse btn-mini">Inverse</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-link btn-mini</code></p>
+                  <button class="btn btn-link btn-mini" type="button">Link
+                    button</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 --> </div>
+              <!-- End .row-fluid --> </div>
+            <!-- End .span6 --> </div>
+          <!-- End .row-fluid -->
+          <div class="row-fluid">
+            <div class="span6">
+              <div class="page-header">
+                <h4>大按钮</h4>
+              </div>
+              <div class="row-fluid">
+                <div class="span4">
+                  <p><code>btn btn-large</code></p>
+                  <button href="#" class="btn btn-large">Default</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-primary btn-large</code></p>
+                  <button href="#" class="btn btn-primary btn-large">Primary</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-info btn-large</code></p>
+                  <button href="#" class="btn btn-info btn-large">Info</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 --> </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid">
+                <div class="span4">
+                  <p><code>btn btn-success btn-large</code></p>
+                  <button href="#" class="btn btn-success btn-large">Success</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-warning btn-large</code></p>
+                  <button href="#" class="btn btn-warning btn-large">Warning</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-danger btn-large</code></p>
+                  <button href="#" class="btn btn-danger btn-large">Danger</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 --> </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid">
+                <div class="span4">
+                  <p><code>btn btn-inverse btn-large</code></p>
+                  <button href="#" class="btn btn-inverse btn-large">Inverse</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-link btn-large</code></p>
+                  <button class="btn btn-link btn-large" type="button">Link
+                    button</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 --> </div>
+              <!-- End .row-fluid --> </div>
+            <!-- End .span6 -->
+            <div class="span6">
+              <div class="page-header">
+                <h4>禁用按钮</h4>
+              </div>
+              <div class="row-fluid">
+                <div class="span4">
+                  <p><code>btn</code></p>
+                  <button disabled="disabled" href="#" class="btn">Default</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-primary</code></p>
+                  <button disabled="disabled" href="#" class="btn btn-primary">Primary</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-info</code></p>
+                  <button disabled="disabled" href="#" class="btn btn-info">Info</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 --> </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid">
+                <div class="span4">
+                  <p><code>btn btn-success</code></p>
+                  <button disabled="disabled" href="#" class="btn btn-success">Success</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-warning</code></p>
+                  <button disabled="disabled" href="#" class="btn btn-warning">Warning</button>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-danger</code></p>
+                  <button disabled="disabled" href="#" class="btn btn-danger">Danger</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 --> </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid">
+                <div class="span4">
+                  <p><code>btn btn-inverse</code></p>
+                  <button disabled="disabled" href="#" class="btn btn-inverse">Inverse</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-link</code></p>
+                  <button disabled="disabled" class="btn btn-link" type="button">Link
+                    button</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 --> </div>
+              <!-- End .row-fluid --> </div>
+            <!-- End .span6 --> </div>
+          <!-- End .row-fluid -->
+          <div class="row-fluid">
+            <div class="span6">
+              <div class="page-header">
+                <h4>图标按钮</h4>
+              </div>
+              <div class="row-fluid">
+                <div class="span4">
+                  <p><code>btn</code></p>
+                  <button href="#" class="btn"><span class="icon16 icomoon-icon-cog"></span>
+                    Default</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-primary</code></p>
+                  <button href="#" class="btn btn-primary"><span class="icon16 icomoon-icon-basket white"></span>
+                    Primary</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-info</code></p>
+                  <button href="#" class="btn btn-info"><span class="icon16 icomoon-icon-info-2 white"></span>
+                    Info</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 --> </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid">
+                <div class="span4">
+                  <p><code>btn btn-success</code></p>
+                  <button href="#" class="btn btn-success"><span class="icon16 icomoon-icon-checkmark white"></span>
+                    Success</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-warning</code></p>
+                  <button href="#" class="btn btn-warning"><span class="icon16 icomoon-icon-warning white"></span>
+                    Warning</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-danger</code></p>
+                  <button href="#" class="btn btn-danger"><span class="icon16 icomoon-icon-cancel-2 white"></span>
+                    Danger</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 --> </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid">
+                <div class="span4">
+                  <p><code>btn btn-inverse</code></p>
+                  <button href="#" class="btn btn-inverse"><span class="icon16 icomoon-icon-loop white"></span>
+                    Inverse</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p><code>btn btn-link</code></p>
+                  <button class="btn btn-link" type="button"><span class="icon16 icomoon-icon-link-2"></span>
+                    Link button</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 --> </div>
+              <!-- End .row-fluid --> </div>
+            <!-- End .span6 -->
+            <div class="span6">
+              <div class="page-header">
+                <h4>其它</h4>
+              </div>
+              <div class="row-fluid">
+                <div class="span4">
+                  <p>button groups</p>
+                  <div class="btn-group"> <a href="#" class="btn"><span class="icon-align-left"></span></a>
+                    <a href="#" class="btn"><span class="icon-align-center"></span></a>
+                    <a href="#" class="btn"><span class="icon-align-right"></span></a>
+                    <a href="#" class="btn"><span class="icon-align-justify"></span></a>
+                  </div>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p>Drop down button</p>
+                  <div class="btn-group"> <a href="#" class="btn btn-primary"><span
+
+                        class="icon-user icon-white"></span> User</a> <a href="#"
+
+                      data-toggle="dropdown" class="btn btn-primary dropdown-toggle"><span
+
+                        class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                      <li><a href="#"><span class="icon-pencil"></span> Edit</a></li>
+                      <li><a href="#"><span class="icon-trash"></span> Delete</a></li>
+                      <li><a href="#"><span class="icon-ban-circle"></span> Ban</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#"><span class="i"></span> Make admin</a></li>
+                    </ul>
+                  </div>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p>Drop up button</p>
+                  <div class="btn-group dropup"> <button class="btn">Dropup</button>
+                    <button class="btn dropdown-toggle" data-toggle="dropdown"><span
+
+                        class="caret"></span></button>
+                    <ul class="dropdown-menu">
+                      <li><a href="#">Action</a></li>
+                      <li><a href="#">Another action</a></li>
+                      <li><a href="#">Something else here</a></li>
+                      <li class="divider"></li>
+                      <li><a href="#">Separated link</a></li>
+                    </ul>
+                  </div>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 --> </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid">
+                <div class="span4">
+                  <p>Loading state button</p>
+                  <button class="btn" data-loading-text="loading..." id="fat-btn">Loading
+                    State</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p>Single toggle</p>
+                  <button data-toggle="button" class="btn btn-info">Single
+                    Toggle</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 -->
+                <div class="span4">
+                  <p>Checkbox buttons</p>
+                  <div data-toggle="buttons-checkbox" class="btn-group"> <button
+
+                      class="btn btn-primary active">Left</button> <button class="btn btn-primary active">Middle</button>
+                    <button class="btn btn-primary active">Right</button> </div>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 --> </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid">
+                <div class="span4">
+                  <p>Radio buttons</p>
+                  <div data-toggle="buttons-radio" class="btn-group"> <button class="btn btn-primary">Left</button>
+                    <button class="btn btn-primary">Middle</button> <button class="btn btn-primary active">Right</button>
+                  </div>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span4 --> </div>
+              <!-- End .row-fluid -->
+              <div class="row-fluid">
+                <div class="span12">
+                  <p>Block level buttons</p>
+                  <button class="btn btn-large btn-block btn-primary" type="button">Block
+                    level button</button> <button class="btn btn-large btn-block"
+
+                    type="button">Block level button</button>
+                  <div class="marginB10"></div>
+                </div>
+                <!-- End .span6 --> </div>
+            </div>
+            <!-- End .span6 --> </div>
+          <!-- End .row-fluid -->
+          <!-- Page end here -->
+          <div id="myModal1" class="modal fade hide">
+            <div class="modal-header"> <button data-dismiss="modal" class="close"
+
+                type="button"><span class="icon12 minia-icon-close"></span></button>
+              <h3>Chat layout</h3>
+            </div>
+            <div class="modal-body">
+              <ul class="messages">
+                <li class="user clearfix"> <a class="avatar" href="#"> <img alt=""
+
+                      src="images/avatar2.jpeg" /> </a>
+                  <div class="message">
+                    <div class="head clearfix"> <span class="name"><strong>Lazar</strong>
+                        says:</span> <span class="time">25 seconds ago</span> </div>
+                    <p> Time to go i call you tomorrow. </p>
+                  </div>
+                </li>
+                <li class="admin clearfix"> <a class="avatar" href="#"> <img alt=""
+
+                      src="images/avatar3.jpeg" /> </a>
+                  <div class="message">
+                    <div class="head clearfix"> <span class="name"><strong>Sugge</strong>
+                        says:</span> <span class="time">just now</span> </div>
+                    <p> OK, have a nice day. </p>
+                  </div>
+                </li>
+                <li class="sendMsg">
+                  <form action="#" class="form-horizontal"> <textarea style="width:98%;"
+
+                      placeholder="Enter your message ..." rows="1" id="textarea"
+
+                      class="elastic"></textarea> <button class="btn btn-info marginT10"
+
+                      type="submit">Send message</button> </form>
+                </li>
+              </ul>
+            </div>
+            <div class="modal-footer"> <a data-dismiss="modal" class="btn" href="#">Close</a>
+            </div>
+          </div>
+        </div>
+        <!-- End contentwrapper --> </div>
+      <!-- End #content --> </div>
+    <!-- End #wrapper -->
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Important plugins put in all pages -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"
+
+type="text/javascript"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.21/jquery-ui.min.js"
+
+type="text/javascript"></script>
+    <script src="js/bootstrap/bootstrap.js" type="text/javascript"></script>
+    <script src="js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="js/jquery.mousewheel.js" type="text/javascript"></script>
+    <!-- Charts plugins -->
+    <script src="plugins/charts/sparkline/jquery.sparkline.min.js" type="text/javascript"></script><!-- Sparkline plugin -->
+    <!-- Misc plugins -->
+    <script src="plugins/misc/prettify/prettify.js" type="text/javascript"></script><!-- Code view plugin -->
+    <script src="plugins/misc/qtip/jquery.qtip.min.js" type="text/javascript"></script><!-- Custom tooltip plugin -->
+    <script src="plugins/misc/totop/jquery.ui.totop.min.js" type="text/javascript"></script>
+    <!-- Search plugin -->
+    <script src="plugins/misc/search/tipuesearch_set.js" type="text/javascript"></script>
+    <script src="plugins/misc/search/tipuesearch_data.js" type="text/javascript"></script><!-- JSON for searched results -->
+    <script src="plugins/misc/search/tipuesearch.js" type="text/javascript"></script>
+    <!-- Form plugins -->
+    <script src="plugins/forms/watermark/jquery.watermark.min.js" type="text/javascript"></script>
+    <script src="plugins/forms/uniform/jquery.uniform.min.js" type="text/javascript"></script>
+    <!-- Fix plugins -->
+    <script src="plugins/fix/ios-fix/ios-orientationchange-fix.js" type="text/javascript"></script>
+    <!-- Init plugins -->
+    <script src="js/main.js" type="text/javascript"></script><!-- Core js functions -->
+    <script src="js/buttons.js" type="text/javascript"></script><!-- Init plugins only for page -->
+  </body>
+</html>
